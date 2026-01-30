@@ -65,7 +65,7 @@ When you ask an agent (e.g., Antigravity) to "Create a presentation":
 6.  **Tech** - Terminal/Code editor aesthetic.
 7.  **Nature** - Green, organic, blurry backgrounds.
 8.  **Gradient** - Modern animated gradients.
-9.  **Grid** - Bento-box layout.
+
 10. **Image Focus** - Fullscreen cinematic background.
 
 ## 📝 License
