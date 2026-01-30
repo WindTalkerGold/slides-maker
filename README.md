@@ -32,13 +32,22 @@ This repository contains a suite of web-based presentation templates and "Skill"
 ## 🛠️ Usage
 
 ### 1. Installation (For Agents)
-To make your AI agents aware of this library on your machine, run:
+This script installs the prompt/skill definitions into your target repository (where you want to use the agent).
 
 ```bash
-node install.js
+# Syntax
+node install.js <agent> <path/to/target/repo>
+
+# Examples
+node install.js antigravity ../my-cool-project
+node install.js claude-code ../another-project
 ```
 
-This will update the `SKILL.md` files in the `skills/` directory with the absolute path to this repository. You can then point your agent configuration to the respective `SKILL.md`.
+- **Antigravity**: Installs to `<target>/.agent/skills/web-presentations/SKILL.md`
+- **Claude Code**: Installs to `<target>/.claude/skills/web-presentation-generator.md`
+- **OpenCode**: Installs to `<target>/.opencode/skills/web-presentation-generator.md`
+
+The script automatically configures the skill to point back to *this* `templates` directory, so you can generate slides anywhere.
 
 ### 2. Manual Usage / Preview
 You can browse and test the templates locally:
