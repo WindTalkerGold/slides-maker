@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Templates Gallery</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .preview {
+            height: 150px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .info {
+            padding: 20px;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .desc {
+            font-size: 0.9rem;
+            color: #86868b;
+        }
+
+        /* Template Specific Previews */
+        .t1 {
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .t2 {
+            background: #0f0f0f;
+            color: #00ff88;
+        }
+
+        .t3 {
+            background: #004080;
+            color: white;
+        }
+
+        .t4 {
+            background: #FFEB3B;
+            color: black;
+            border: 4px solid black;
+        }
+
+        .t5 {
+            background: #fcfcfc;
+            font-family: serif;
+            font-style: italic;
+        }
+
+        .t6 {
+            background: #0d1117;
+            color: #58a6ff;
+            font-family: monospace;
+        }
+
+        .t7 {
+            background: #f7f9f2;
+            color: #4a6741;
+        }
+
+        .t8 {
+            background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            color: white;
+        }
+
+        .t9 {
+            background: #f0f2f5;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
+            gap: 5px;
+        }
+
+        .t9>div {
+            background: white;
+            border-radius: 4px;
+        }
+
+        .t10 {
+            background: black;
+            color: white;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Available Templates</h1>
+    <div class="grid">
+        <a href="template-01-minimal/index.html" class="card">
+            <div class="preview t1">Ag</div>
+            <div class="info">
+                <div class="title">Minimalist</div>
+                <div class="desc">Clean & Simple</div>
+            </div>
+        </a>
+        <a href="template-02-dark/index.html" class="card">
+            <div class="preview t2">Ag</div>
+            <div class="info">
+                <div class="title">Dark Mode</div>
+                <div class="desc">Neon & High Contrast</div>
+            </div>
+        </a>
+        <a href="template-03-corporate/index.html" class="card">
+            <div class="preview t3">Ag</div>
+            <div class="info">
+                <div class="title">Corporate</div>
+                <div class="desc">Professional Blue</div>
+            </div>
+        </a>
+        <a href="template-04-creative/index.html" class="card">
+            <div class="preview t4">Ag</div>
+            <div class="info">
+                <div class="title">Creative</div>
+                <div class="desc">Bold & Colorful</div>
+            </div>
+        </a>
+        <a href="template-05-academic/index.html" class="card">
+            <div class="preview t5">Ag</div>
+            <div class="info">
+                <div class="title">Academic</div>
+                <div class="desc">Serif & Structured</div>
+            </div>
+        </a>
+        <a href="template-06-tech/index.html" class="card">
+            <div class="preview t6">$_</div>
+            <div class="info">
+                <div class="title">Tech</div>
+                <div class="desc">Terminal / Code</div>
+            </div>
+        </a>
+        <a href="template-07-nature/index.html" class="card">
+            <div class="preview t7">Ag</div>
+            <div class="info">
+                <div class="title">Nature</div>
+                <div class="desc">Organic & Fresh</div>
+            </div>
+        </a>
+        <a href="template-08-gradient/index.html" class="card">
+            <div class="preview t8">Ag</div>
+            <div class="info">
+                <div class="title">Gradient</div>
+                <div class="desc">Animated Colors</div>
+            </div>
+        </a>
+        <a href="template-09-grid/index.html" class="card">
+            <div class="preview t9">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="info">
+                <div class="title">Grid</div>
+                <div class="desc">Bento Box Layout</div>
+            </div>
+        </a>
+        <a href="template-10-image-focus/index.html" class="card">
+            <div class="preview t10">Ag</div>
+            <div class="info">
+                <div class="title">Image Focus</div>
+                <div class="desc">Cinematic & Immersive</div>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>

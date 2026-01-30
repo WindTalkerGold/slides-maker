@@ -1,0 +1,122 @@
+/* Image Focus Theme Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+#app.loaded {
+    opacity: 1;
+}
+
+/* We will use slide container as the full viewport wrapper */
+.slide-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Text at bottom */
+    padding: 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Overlay gradient so text is readable */
+.slide-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    animation: fadeUp 1s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #ccc;
+    font-weight: 300;
+}
+
+.controls {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 100;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}

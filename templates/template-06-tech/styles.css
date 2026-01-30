@@ -1,0 +1,113 @@
+/* Dark Mode Theme Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d1117;
+    color: #e6edf3;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+}
+
+#app.loaded {
+    opacity: 1;
+}
+
+.slide-container {
+    width: 90%;
+    max-width: 1000px;
+    height: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    border: 1px solid #30363d;
+    background: #161b22;
+    border-radius: 6px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Terminal Header Simulation */
+.slide-container::before {
+    content: "user@presentation: ~";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #58a6ff;
+    margin-bottom: 20px;
+}
+
+h1::before {
+    content: "$ ";
+    color: #79c0ff;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #7ee787;
+    margin-bottom: 15px;
+}
+
+h2::before {
+    content: "## ";
+    color: #8b949e;
+}
+
+p,
+li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #c9d1d9;
+}
+
+code {
+    background: rgba(110, 118, 129, 0.4);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.nav-btn {
+    background: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: #30363d;
+    border-color: #8b949e;
+}
