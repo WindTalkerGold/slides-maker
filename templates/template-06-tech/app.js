@@ -19,6 +19,13 @@ class SlideDeck {
         // Keyboard navigation
         window.addEventListener('keydown', (e) => this.handleKeydown(e));
 
+        // Check URL hash for initial slide
+        const hash = window.location.hash.slice(1);
+        const initialIndex = parseInt(hash, 10) - 1;
+        if (!isNaN(initialIndex) && initialIndex >= 0 && initialIndex < this.slides.length) {
+            this.currentSlideIndex = initialIndex;
+        }
+
         // Initial load
         await this.loadSlide(this.currentSlideIndex);
         this.appElement.classList.add('loaded');
