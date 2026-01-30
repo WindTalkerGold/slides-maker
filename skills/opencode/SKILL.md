@@ -2,15 +2,15 @@
 
 ## Tool Definition
 
-**Template Library**: `D:/Coding/pp/slides-maker/templates`
+**Template Library**: `{{TEMPLATES_DIR}}`
 
 ## Usage
 When asked to create a presentation:
-1.  **List**: Read `D:/Coding/pp/slides-maker/templates` templates.
-2.  **Copy Template**: Copy `D:/Coding/pp/slides-maker/templates/<template-id>` content to target.
-3.  **Copy Server**: Copy `D:/Coding/pp/slides-maker/templates/../server.js` to target.
+1.  **List**: Read `{{TEMPLATES_DIR}}` templates.
+2.  **Copy Template**: Copy `{{TEMPLATES_DIR}}/<template-id>` content to target.
+3.  **Copy Server**: Copy `{{TEMPLATES_DIR}}/../server.js` to target.
     - *Required for dynamic JS evaluation and avoiding CORS.*
 
 **Example**:
-1. `cp -r D:/Coding/pp/slides-maker/templates/template-05-academic/* ./research-talk`
-2. `cp D:/Coding/pp/slides-maker/templates/../server.js ./research-talk/`
+1. `cp -r {{TEMPLATES_DIR}}/template-05-academic/* ./research-talk`
+2. `cp {{TEMPLATES_DIR}}/../server.js ./research-talk/`
